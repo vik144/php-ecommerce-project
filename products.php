@@ -31,6 +31,21 @@
   Plugins:
     - @tailwindcss/forms
 -->
+<?php 
+ include "connect.php";
+
+ if($conn->connect_error){
+     die("connection failed:".$conn->connect_error);
+ }
+
+ $sql = "SELECT product_name, product_price FROM products";
+ $result = $conn->query($sql);
+
+ 
+
+
+
+?>
 
     <section>
       <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
@@ -225,53 +240,34 @@
 
           <div class="lg:col-span-3">
             <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <li>
+    <!-- Product Cards loop -->
+      <?php
+          if($result->num_rows > 0){ ?>
+            <?php while($row = $result->fetch_assoc()) { ?>
+                <li class="product-card">
                 <a href="#" class="group block overflow-hidden">
                   <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
 
                   <div class="relative bg-white pt-3">
-                    <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">Basic Tee</h3>
+                    <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"><?php echo $row["product_name"] ?></h3>
 
                     <p class="mt-2">
                       <span class="sr-only"> Regular Price </span>
 
-                      <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                      <span class="tracking-wider text-gray-900"> <?php echo $row["product_price"] ?> CAD </span>
                     </p>
                   </div>
                 </a>
               </li>
 
-              <li>
-                <a href="#" class="group block overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+          <?php    }
+           }else{
+              echo "0 results";
+          }
+              
+        ?>
 
-                  <div class="relative bg-white pt-3">
-                    <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">Basic Tee</h3>
 
-                    <p class="mt-2">
-                      <span class="sr-only"> Regular Price </span>
-
-                      <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="group block overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
-
-                  <div class="relative bg-white pt-3">
-                    <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">Basic Tee</h3>
-
-                    <p class="mt-2">
-                      <span class="sr-only"> Regular Price </span>
-
-                      <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
-                    </p>
-                  </div>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
