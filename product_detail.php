@@ -62,7 +62,8 @@ if(is_numeric($id) && $id!=0){
               <?php
               if($num_row ==1){
                 while($row=mysqli_fetch_assoc($result_product))
-                {
+                { $product_name = $row['product_name'];
+                  $product_price = $row['product_price'];
               ?>
     <section>
       <div class="relative mx-auto max-w-screen-xl px-4 py-8">
@@ -118,7 +119,7 @@ if(is_numeric($id) && $id!=0){
               <!-- <button class="mt-2 text-sm font-medium underline">Read More</button> -->
             </div>
             <?php }}?>
-            <form class="mt-8">
+            <form class="mt-8" action="cart.php" method="post">
               <!-- <fieldset>
                 <legend class="mb-1 text-sm font-medium">Color</legend>
 
@@ -142,7 +143,8 @@ if(is_numeric($id) && $id!=0){
                   </label>
                 </div>
               </fieldset> -->
-
+                  <input type="hidden" value="<?php echo $product_name?>" name="product_name">
+                  <input type="hidden" value="<?php echo $product_price?>" name="product_price">
               <fieldset class="mt-4">
                 <legend class="mb-1 text-sm font-medium">Size</legend>
 
@@ -183,7 +185,7 @@ if(is_numeric($id) && $id!=0){
                 <div>
                   <label for="quantity" class="sr-only">Qty</label>
 
-                  <input type="number" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none" />
+                  <input type="number" name="product_quantity" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none" />
                 </div>
 
                 <button type="submit" class="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500">Add to Cart</button>
