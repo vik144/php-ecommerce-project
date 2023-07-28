@@ -335,7 +335,7 @@ function wZipcodecheck($wzipcode){
                     <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Email</label>
                     <input tabindex="0" arial-label="Please input name" type="text"
                         class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
-                        name="email" />
+                        name="email"/>
                     <div>
                         <?php
                     if($checkwemail==1){
@@ -371,7 +371,7 @@ function wZipcodecheck($wzipcode){
                         Name</label>
                     <input tabindex="0" arial-label="Please input name" type="text"
                         class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
-                        name="street" />
+                        name="street"  />
                     <?php
                     if($checkwstreet==1){
                       echo'
@@ -424,7 +424,7 @@ function wZipcodecheck($wzipcode){
                     <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Zip Code</label>
                     <input tabindex="0" arial-label="Please input name" type="text"
                         class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
-                        name="zipcode" />
+                        name="zipcode"/>
                     <div>
                         <?php
                     if($checkwzipcode==1){
