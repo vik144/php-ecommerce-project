@@ -72,9 +72,9 @@ if(is_numeric($id) && $id!=0){
             <img alt="Les Paul" src="<?php echo $row['product_src'];?>" class="aspect-square w-full rounded-xl object-cover" />
 
             <div class="grid grid-cols-2 gap-4 lg:mt-4">
-              <img alt="Les Paul" src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" class="aspect-square w-full rounded-xl object-cover" />
+              <img alt="Les Paul" src="<?php echo $row['product_src'];?>" class="aspect-square w-full rounded-xl object-cover" />
 
-              <img alt="Les Paul" src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" class="aspect-square w-full rounded-xl object-cover" />
+              <img alt="Les Paul" src="<?php echo $row['product_src'];?>" class="aspect-square w-full rounded-xl object-cover" />
             </div>
           </div>
 
@@ -118,7 +118,7 @@ if(is_numeric($id) && $id!=0){
 
               <!-- <button class="mt-2 text-sm font-medium underline">Read More</button> -->
             </div>
-            <?php }}?>
+           
             <form class="mt-8" action="cart.php" method="post">
               <!-- <fieldset>
                 <legend class="mb-1 text-sm font-medium">Color</legend>
@@ -150,32 +150,30 @@ if(is_numeric($id) && $id!=0){
 
                 <div class="flex flex-wrap gap-1">
                   <label for="size_xs" class="cursor-pointer">
-                    <input type="radio" name="size" id="size_xs" class="peer sr-only" />
-
+                    <input type="radio" name="size" id="size_xs" value="25mm" checked class="peer sr-only" />
                     <span class="group inline-flex h-8 w-14 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"> 25mm </span>
                   </label>
 
                   <label for="size_s" class="cursor-pointer">
-                    <input type="radio" name="size" id="size_s" class="peer sr-only" />
+                    <input type="radio" name="size" id="size_s" value="30mm" class="peer sr-only" />
 
                     <span class="group inline-flex h-8 w-14 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"> 30mm </span>
                   </label>
 
                   <label for="size_m" class="cursor-pointer">
-                    <input type="radio" name="size" id="size_m" class="peer sr-only" />
+                    <input type="radio" name="size" id="size_m" value="35mm" class="peer sr-only" />
 
                     <span class="group inline-flex h-8 w-14 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"> 35mm </span>
                   </label>
 
                   <label for="size_l" class="cursor-pointer">
-                    <input type="radio" name="size" id="size_l" class="peer sr-only" />
+                    <input type="radio" name="size" id="size_l" value="40mm" class="peer sr-only" />
 
                     <span class="group inline-flex h-8 w-14 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"> 40mm </span>
                   </label>
 
                   <label for="size_xl" class="cursor-pointer">
-                    <input type="radio" name="size" id="size_xl" class="peer sr-only" />
-
+                    <input type="radio" name="size" id="size_xl" value="45mm" class="peer sr-only" />
                     <span class="group inline-flex h-8 w-14 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"> 45mm </span>
                   </label>
                 </div>
@@ -183,11 +181,11 @@ if(is_numeric($id) && $id!=0){
 
               <div class="mt-8 flex gap-4">
                 <div>
+                <input type="text" name="img_src"  value="<?php echo$row['product_src'];?>" class="peer sr-only" />
                   <label for="quantity" class="sr-only">Qty</label>
 
                   <input type="number" name="product_quantity" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none" />
                 </div>
-
                 <button type="submit" class="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500">Add to Cart</button>
               </div>
             </form>
@@ -195,8 +193,10 @@ if(is_numeric($id) && $id!=0){
         </div>
       </div>
     </section>
+    <?php }}?>
     <?php include "footer.php";?>
 
     <!-- product detail ends -->
   </body>
 </html>
+<!-- https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80 -->
