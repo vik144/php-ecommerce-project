@@ -171,9 +171,9 @@ else{
                     <?php
                     if(isset($_SESSION['fname'])){
                       echo'
-                      <button class="uppercase font-medium py-2 w-full bg-blue-500 text-white rounded mt-8">
+                      <a  href="./checkout.view.php" class="uppercase font-medium py-2 w-full bg-blue-500 text-white rounded mt-8">
                       checkout
-                      </button>';
+                      </a>';
                     }
                     else{
                       echo'<div class="text-red-500 my-4">
