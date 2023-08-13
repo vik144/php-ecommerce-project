@@ -145,6 +145,7 @@ if(is_numeric($id) && $id!=0){
               </fieldset> -->
                   <input type="hidden" value="<?php echo $product_name?>" name="product_name">
                   <input type="hidden" value="<?php echo $product_price?>" name="product_price">
+                  <input type="hidden" value="<?php echo $id?>" name="product_id">
               <fieldset class="mt-4">
                 <legend class="mb-1 text-sm font-medium">Size</legend>
 
@@ -186,7 +187,7 @@ if(is_numeric($id) && $id!=0){
 
                   <input type="number" name="product_quantity" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none" />
                 </div>
-                <button type="submit" class="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500">Add to Cart</button>
+                <button type="submit" name="add" class="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500">Add to Cart</button>
               </div>
             </form>
           </div>

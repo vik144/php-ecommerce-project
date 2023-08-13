@@ -1,29 +1,4 @@
-<?php
-$cart_empty=false;
-if (isset($_COOKIE['cart']) && !empty($_COOKIE['cart'])) {
-$total=0;
-//get cart from cookie
-$cart_json = $_COOKIE["cart"];
-$cart = json_decode($cart_json);
-// echo "<pre>";
-// print_r($cart);
-// echo "</pre>";
-if($cart == null) {
-  echo "Cart is empty";
-}
-else{
-  foreach($cart as $key){
-    $qty=$key->product_quantity;
-    $indi=$key->product_price;
-    $sub=(int)$qty*(int)$indi;
-    $total+=$sub;
-  }
-}
-}
-else{
-  $cart_empty=true;
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-white">
@@ -59,7 +34,7 @@ else{
                 <div class="flex justify-between">
                     <h2 class="text-xl font-bold">Checkout</h2>
             </div>
-            <form action="./order-confirm.view.php" method="POST">
+            <form action="./checkout.php" method="POST">
             <?php
                     if(isset($_SESSION['fname'])){
                       echo'  <h2  class="text-xl font-bold my-2">Welcome ' . $_SESSION['fname'] . '</h2>
