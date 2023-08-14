@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 05, 2023 at 08:10 PM
+-- Host: localhost
+-- Generation Time: Aug 14, 2023 at 10:25 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,7 +45,35 @@ CREATE TABLE `customers_details` (
 --
 
 INSERT INTO `customers_details` (`srno`, `first_name`, `last_name`, `email`, `password`, `street`, `province`, `city`, `zipcode`, `date_entered`) VALUES
-(1, 'Parin', 'Chaudhari', 'parinchaudhari318@gmail.com', '$2y$10$BeXjSTsIqtnfUp6PxV1QC.oN/.DV4kvOO7/5vqOS7QzSGcfTgpFCW', '103 West Street', 'ontario', 'Brantford', 'N3T3E9', '2023-07-28 13:32:01');
+(1, 'Parin', 'Chaudhari', 'parinchaudhari318@gmail.com', '$2y$10$BeXjSTsIqtnfUp6PxV1QC.oN/.DV4kvOO7/5vqOS7QzSGcfTgpFCW', '103 West Street', 'ontario', 'Brantford', 'N3T3E9', '2023-07-28 13:32:01'),
+(2, 'Vikranth', 'ananthula', 'vik@vmail.com', '$2y$10$zHdIhdPL8eKxyqsspmA..uyVnP0MCnAfHTpciDqaTDbMZxcGFQtZq', '115 Chatham Street', 'ontario', 'Brantford', 'N3T 2P3', '2023-08-07 19:07:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `order_total` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_details`
+--
+
+CREATE TABLE `order_details` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `product_qty` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `product_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -92,6 +120,21 @@ ALTER TABLE `customers_details`
   ADD PRIMARY KEY (`srno`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `customer_fkey` (`customer_id`);
+
+--
+-- Indexes for table `order_details`
+--
+ALTER TABLE `order_details`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_fkey` (`order_id`),
+  ADD KEY `product_fkey` (`product_id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -105,13 +148,42 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `customers_details`
 --
 ALTER TABLE `customers_details`
-  MODIFY `srno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `srno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `order_details`
+--
+ALTER TABLE `order_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `srno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `customer_fkey` FOREIGN KEY (`customer_id`) REFERENCES `customers_details` (`srno`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `order_details`
+--
+ALTER TABLE `order_details`
+  ADD CONSTRAINT `order_fkey` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `product_fkey` FOREIGN KEY (`product_id`) REFERENCES `products` (`srno`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

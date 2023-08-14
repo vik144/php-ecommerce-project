@@ -119,7 +119,7 @@ if(is_numeric($id) && $id!=0){
               <!-- <button class="mt-2 text-sm font-medium underline">Read More</button> -->
             </div>
            
-            <form class="mt-8" action="cart.php" method="post">
+            <form class="mt-8" action="cart.view.php" method="post">
               <!-- <fieldset>
                 <legend class="mb-1 text-sm font-medium">Color</legend>
 

@@ -43,39 +43,39 @@
                     else{
                       echo'  <label for="fname" class="block text-sm font-medium text-gray-700">
                       First Name</label>
-                      <input type="text" name="fname" id="fname" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="First Name" required>
+                      <input type="text" name="fname" id="fname" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="First Name" >
                       <label for="lname" class="block text-sm font-medium text-gray-700">
                       Last Name</label>
-                      <input type="text" name="lname" id="lname" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Last Name" required>
+                      <input type="text" name="lname" id="lname" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Last Name" >
                       <label for="email" class="block text-sm font-medium text-gray-700">
                       Email</label>
-                      <input type="email" name="email" id="email" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Email" required>
+                      <input type="email" name="email" id="email" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Email" >
                       <hr>';
                     }
                       ?>
                 <h4 class="text-xl font-bold my-3">Add Shipping Address</h4>
                 <label for="address" class="block text-sm font-medium text-gray-700">
                 Address</label>
-                <input type="text" name="address" id="address" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Address" required>
+                <input type="text" name="address" id="address" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Address" >
                 <label for="city" class="block text-sm font-medium text-gray-700">
                 City</label>
-                <input type="text" name="city" id="city" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="City" required>
+                <input type="text" name="city" id="city" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="City" >
                 <label for="state" class="block text-sm font-medium text-gray-700">
                 State</label>
-                <input type="text" name="state" id="state" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="State" required>  
+                <input type="text" name="state" id="state" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="State" >  
                 <label for="zip" class="block text-sm font-medium text-gray-700">
                 Zip</label>
-                <input type="text" name="zip" id="zip" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Zip" required>
+                <input type="text" name="zip" id="zip" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Zip" >
                 <hr>
                 <label for="card" class="block text-sm font-medium text-gray-700">
                 Card Number</label>
-                <input type="text" name="card" id="card" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Card Number" required>
+                <input type="text" name="card" id="card" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Card Number" >
                 <label for="exp" class="block text-sm font-medium text-gray-700">
                 Expiration Date</label>
-                <input type="text" name="exp" id="exp" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="MM/YY" required>
+                <input type="text" name="exp" id="exp" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="MM/YY" >
                 <label for="cvv" class="block text-sm font-medium text-gray-700">
                 CVV</label>
-                <input type="text" name="cvv" id="cvv" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="CVV" required>
+                <input type="text" name="cvv" id="cvv" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="CVV" >
                 <hr>
                 <div class="flex justify-between gap-x-2">
                     <a href="./cart.view.php" class="uppercase font-medium py-2 w-full mt-8">
