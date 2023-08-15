@@ -4,7 +4,7 @@
          <img src="logo/icon.png" width="50" height="50" alt="" srcset="">
         </div>
 
-        <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum itaque neque.</p>
+        <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">WatchBox is the world’s leading watch house.</p>
 
         <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>

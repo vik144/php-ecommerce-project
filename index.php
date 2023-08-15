@@ -55,10 +55,8 @@
         <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
             <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                 <div class="sm:max-w-lg">
-                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Summer styles are finally
-                        here</h1>
-                    <p class="mt-4 text-xl text-gray-500">This year, our new summer collection will shelter you from the
-                        harsh elements of a world that doesn't care if you live or die.</p>
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">WatchBox is home to the greatest collection of luxury watches</h1>
+                    <p class="mt-4 text-xl text-gray-500">Shop from a wide selection of certified as authentic and Collector Quality Watches</p>
                 </div>
                 <div>
                     <div class="mt-10">
@@ -70,35 +68,35 @@
                                 <div class="flex items-center space-x-6 lg:space-x-8">
                                     <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                         <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                                            <img src="./img/tile-8.jpg"
                                                 alt="" class="h-full w-full object-cover object-center" />
                                         </div>
                                         <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                                                alt="" class="h-full w-full object-cover object-center" />
-                                        </div>
-                                    </div>
-                                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                                                alt="" class="h-full w-full object-cover object-center" />
-                                        </div>
-                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                                                alt="" class="h-full w-full object-cover object-center" />
-                                        </div>
-                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                                            <img src="./img/tile-1.jpeg"
                                                 alt="" class="h-full w-full object-cover object-center" />
                                         </div>
                                     </div>
                                     <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                         <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                                            <img src="./img/tile-1.jpeg"
                                                 alt="" class="h-full w-full object-cover object-center" />
                                         </div>
                                         <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                                            <img src="./img/tile-2.jpg"
+                                                alt="" class="h-full w-full object-cover object-center" />
+                                        </div>
+                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                            <img src="./img/tile-3.jpg"
+                                                alt="" class="h-full w-full object-cover object-center" />
+                                        </div>
+                                    </div>
+                                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                            <img src="./img/tile-4.jpg"
+                                                alt="" class="h-full w-full object-cover object-center" />
+                                        </div>
+                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                            <img src="./img/tile-8.jpg"
                                                 alt="" class="h-full w-full object-cover object-center" />
                                         </div>
                                     </div>
@@ -106,7 +104,7 @@
                             </div>
                         </div>
 
-                        <a href="#"
+                        <a href="./products.php"
                             class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop
                             Collection</a>
                     </div>
@@ -125,47 +123,47 @@
                     <div class="group relative">
                         <div
                             class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg"
+                            <img src="./img/tile-4.jpg"
                                 alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
                                 class="h-full w-full object-cover object-center" />
                         </div>
                         <h3 class="mt-6 text-sm text-gray-500">
-                            <a href="#">
+                            <a href="./products.php">
                                 <span class="absolute inset-0"></span>
-                                Desk and Office
+                                Premium collection
                             </a>
                         </h3>
-                        <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+                        <p class="text-base font-semibold text-gray-900">Business Watches</p>
                     </div>
                     <div class="group relative">
                         <div
                             class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg"
-                                alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+                            <img src="./img/tile-8.jpg"
+                                alt="Collection of business watches"
                                 class="h-full w-full object-cover object-center" />
                         </div>
                         <h3 class="mt-6 text-sm text-gray-500">
-                            <a href="#">
+                            <a href="./products.php">
                                 <span class="absolute inset-0"></span>
-                                Self-Improvement
+                                Affordable collection
                             </a>
                         </h3>
-                        <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+                        <p class="text-base font-semibold text-gray-900">Casual Watches</p>
                     </div>
                     <div class="group relative">
                         <div
                             class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg"
-                                alt="Collection of four insulated travel bottles on wooden shelf."
+                            <img src="./img/tile-6.jpg"
+                                alt="Collection of casual watches"
                                 class="h-full w-full object-cover object-center" />
                         </div>
                         <h3 class="mt-6 text-sm text-gray-500">
-                            <a href="#">
+                            <a href="./products.php">
                                 <span class="absolute inset-0"></span>
                                 Travel
                             </a>
                         </h3>
-                        <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
+                        <p class="text-base font-semibold text-gray-900">Daily Essentials</p>
                     </div>
                 </div>
             </div>
