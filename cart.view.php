@@ -8,7 +8,7 @@ $cart = new Cart();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['add'])) {
-      echo("added to cart");
+    //   echo("added to cart");
     $cart->addProduct($_POST['product_id'], $_POST['product_name'], $_POST['product_price'], $_POST['product_quantity']);
     }
     if (isset($_POST['change'])) {
@@ -39,10 +39,8 @@ function displayCart($cartItems) {
         </div>
         <div class="flex justify-center items-center">
             <div class="pr-8 flex">
-                <span class="font-semibold">-</span>
                 <input type="text" class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
                     value="'.$product['quantity'].'" />
-                <span class="font-semibold">+</span>
             </div>
             <div class="pr-8">
                 <span class="text-xs font-medium">$'.$product['price'].' for each item</span>

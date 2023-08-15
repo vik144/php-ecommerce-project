@@ -26,7 +26,7 @@
     <!-- nav bar end -->
     <!-- cart starts -->
 
-    <main class="container mx-auto my-auto h-screen ml-98 ">
+    <main class="container mx-auto my-auto h-screen ml-98 text-black">
         <div class="flex flex-col justify-center">
             <div class="col-span-2 p-5 ">
                 <div class="flex flex-col ml-5 text-center">
@@ -36,7 +36,7 @@
                 <form class='bg-gray dark:bg-gray-800 shadow rounded py-16 flex flex-col justify-center items-center' action="./checkout.php" method="POST">
                     <?php
                     if(isset($_SESSION['fname'])){
-                      echo'  <h2  class="text-xl ml-4 my-4  my-2 text-white">Welcome <b>' . $_SESSION['fname'] . '</b> <span>Your Billing Address will be same as the address mention during signup</span></h2>
+                      echo'  <h2  class="text-xl ml-4 my-4  my-2 text-black">Welcome <b>' . $_SESSION['fname'] . '</b> <span>Your Billing Address will be same as the address mention during signup</span></h2>
                     ';
                     }
                     else{
@@ -52,23 +52,23 @@
                       <hr>';
                     }
                       ?>
-                    <h4 class="text-xl font-bold my-3 ml-4 text-slate-50">Card Details</h4>
+                    <h4 class="text-xl font-bold my-3 ml-4 text-black-50">Card Details</h4>
  
-                    <div class="class w-1/2 flex flex-col justify-center ml-5">
+                    <div class="class w-1/2  flex flex-col justify-center ml-5">
 
                    
 
-                        <label for="card" class="my-2 block text-sm font-medium text-slate-100">
+                        <label for="card" class="my-2 block text-sm font-medium text-black">
                             Card Number</label>
                         <input type="text" name="card" id="card"
                             class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             placeholder="Card Number">
-                        <label for="exp" class="my-2 block text-sm font-medium text-slate-100">
+                        <label for="exp" class="my-2 block text-sm font-medium text-black">
                             Expiration Date</label>
                         <input type="text" name="exp" id="exp"
                             class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             placeholder="MM/YY">
-                        <label for="cvv" class="my-2 block text-sm font-medium text-slate-100">
+                        <label for="cvv" class="my-2 block text-sm font-medium text-black">
                             CVV</label>
                         <input type="text" name="cvv" id="cvv"
                             class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
