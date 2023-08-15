@@ -6,7 +6,7 @@ $db="ecommerce_watches";
 
 $conn=mysqli_connect($server,$username,$password,$db);
 if(!$conn){
-        echo"not connected"+mysqli_connect_error();
+        // echo"not connected"+mysqli_connect_error();
 }
 
 

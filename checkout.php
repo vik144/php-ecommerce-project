@@ -24,7 +24,6 @@
         include 'navbar.php';
         require 'connect.php';
         
-        session_start();
         $orderTotal = 0;
         $cartData = [];
         $userId = $_SESSION["u_id"];
@@ -78,8 +77,9 @@
                   <?php renderCartData(); ?>
                   <div class="mt-4">
         <!-- Link to print receipt: with order id as query string -->
-        <?php echo '<a class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" href="order-print.php?order_id=' . $orderID . '"> Print Receipt</a>'; ?>
-        </div>
+        <?php echo '<a class="bg-blue-500 hover:bg-blue-600 text-white font-semibold mx-2 py-2 px-4 rounded" target="_blank" href="order-print.php?order_id=' . $orderID . '"> Print Receipt</a>'; ?>
+        <a class="bg-green-500 hover:bg-green-600 text-white font-semibold mx-3 py-2 px-4 rounded" href="index.php">Go to Home Page</a>    
+    </div>
 
         <div class="mt-4 flex justify-end">
             <p class="text-lg font-semibold">Order Total: <span class="text-green-500"><?php echo $orderTotal; ?></span></p>
@@ -164,10 +164,7 @@ function renderCartData() {
   }
   //end table
   echo '</tbody>
-  </table>';
-  
-
-}
+  </table>';}
 ?>
 
 
